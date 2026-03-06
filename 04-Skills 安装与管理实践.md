@@ -1,6 +1,27 @@
+---
+[⬅️ 上一章：Skills 插件体系与批量开发](03-Skills%20插件体系与批量开发.md) | [📑 目录](README.md) | [➡️ 下一章：ClawHub 平台与技能分发](05-ClawHub%20平台与技能分发.md)
+---
+
 # 第4章：Skills 安装与管理实践
 
+> **难度**: ⭐⭐ 中级 | **预计阅读**: 15 分钟 | **前置章节**: [第 3 章](03-Skills%20插件体系与批量开发.md)
+
 > 本章介绍如何安装、管理和维护 OpenClaw Skills，包括从 ClawdHub 安装、手动安装、版本管理和安全审查。掌握 Skills 管理是提升 Agent 能力的关键一步。
+
+---
+
+## 📑 目录
+
+- [4.1 Skills 安装方式](#41-skills-安装方式)
+- [4.2 Skills 发现与搜索](#42-skills-发现与搜索)
+- [4.3 版本管理](#43-版本管理)
+- [4.4 安全审查](#44-安全审查)
+- [4.5 Skill 配置与 openclaw.json](#45-skill-配置与-openclawjson)
+- [4.6 实战：搭建搜索技能组合](#46-实战搭建搜索技能组合)
+- [实操练习](#实操练习)
+- [常见问题 (FAQ)](#常见问题-faq)
+- [参考资料](#参考资料)
+- [本章小结](#本章小结)
 
 ---
 
@@ -52,7 +73,8 @@ git clone https://github.com/author/my-skill.git \
   ~/.openclaw/workspace/skills/my-skill
 ```
 
-> **注意**：手动安装的 Skill 需要确保目录中包含 `SKILL.md` 文件，Agent 才能正确识别并加载。
+> [!NOTE]
+> 手动安装的 Skill 需要确保目录中包含 `SKILL.md` 文件，Agent 才能正确识别并加载。
 
 ### 方式四：MCP 工具集成
 
@@ -412,4 +434,6 @@ A: 不会冲突。OpenClaw 的 Skill 系统基于目录隔离，各 Skill 独立
 - **实战组合**：通过多引擎搜索组合展示 Skill 协同工作的最佳实践
 - 遇到问题时，善用 `openclaw doctor` 进行诊断。
 
-> 下一章：ClawHub 平台与技能分发
+---
+[⬅️ 上一章：Skills 插件体系与批量开发](03-Skills%20插件体系与批量开发.md) | [📑 目录](README.md) | [➡️ 下一章：ClawHub 平台与技能分发](05-ClawHub%20平台与技能分发.md)
+---
