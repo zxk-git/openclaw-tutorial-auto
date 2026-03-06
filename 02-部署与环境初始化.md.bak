@@ -236,39 +236,6 @@ openclaw logs --follow  # 实时查看 Gateway 日志
 
 ---
 
-
-## 最新动态与补充
-
-> 📅 更新时间: 2026-03-06
-
-### 补充 1
-
-OpenClaw can be deployed on Azure, DigitalOcean, Tencent Cloud, and via CLI. It uses Node.js and npm for installation. Environment initialization involves setting up the necessary dependencies and configurations.
-
-### 补充 2
-
-- **Complete Guide to Deploying OpenClaw on Azure Windows 11 ...** (relevance: 100%)
-  https://techcommunity.microsoft.com/blog/azuredevcommunityblog/complete-guide-to-deploying-openclaw-on-azure-windows-11-virtual-machine/4492001
-  # Complete Guide to Deploying OpenClaw on Azure Windows 11 Virtual
-
-### 补充 3
-
-- **How to Run OpenClaw with DigitalOcean** (relevance: 100%)
-  https://www.digitalocean.com/community/tutorials/how-to-run-openclaw
-  If you prefer to manually deploy OpenClaw on a DigitalOcean Droplet without a 1-Click Application or the App Platform, you can follow the Quickstart Guide. Deploying
-
-### 补充 4
-
-- **OpenClaw Gateway Complete Guide: Remote Deployment ...** (relevance: 100%)
-  https://www.meta-intelligence.tech/en/insight-openclaw-gateway.html
-  OpenClaw's default startup process attempts to initialize GUI components (system tray icon, notification windows, etc.). On Linux servers
-
-### 补充 5
-
-- **Getting Started - OpenClaw** (relevance: 100%)
-  https://docs.openclaw.ai/start/getting-started
-  OpenClaw home pagelight logodark logo. # ​ Getting Started. Fastest chat: open the Control UI (no channel setup needed). Run `openclaw dashboard` and chat in the browser, or open `http://127.0.0.1:1
-
 ## 本章小结
 
 - OpenClaw 支持本地、Docker、分布式多种部署模式。

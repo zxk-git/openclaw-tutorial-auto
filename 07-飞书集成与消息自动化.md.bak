@@ -149,39 +149,6 @@ Agent 可以使用 emoji 对消息做出快速回应，适用于：
 
 ---
 
-
-## 最新动态与补充
-
-> 📅 更新时间: 2026-03-06
-
-### 补充 1
-
-OpenClaw integrates with Lark for AI assistant setups. The integration allows for intelligent automation and AI-powered workflows. This setup is designed for enterprise-level use.
-
-### 补充 2
-
-- **OpenClaw Lark Integration Tutorial: One-Click Configuration of an ...** (relevance: 100%)
-  https://www.tencentcloud.com/techpedia/140016
-  Technology Encyclopedia Home >OpenClaw Lark Integration Tutorial: One-Click Configuration of an Enterprise-Level AI Assistant. # OpenClaw Lark Integration T
-
-### 补充 3
-
-- **Proposal: Add Feishu 飞书 (Lark) channel integration #6020 - GitHub** (relevance: 100%)
-  https://github.com/openclaw/openclaw/discussions/6020
-  ## Navigation Menu. Motivation  * **Large user base**: Feishu is extensively used by Chinese enterprises and organizations * **Regional importance**: Pr
-
-### 补充 4
-
-- **shubhankargokhale/feishu-openclaw - GitHub** (relevance: 100%)
-  https://github.com/shubhankargokhale/feishu-openclaw
-  feishu-openclaw is an application that connects your Feishu/Lark bot to openclaw, enabling you to run tasks easily and efficiently without complex setups. Is it
-
-### 补充 5
-
-- **Clawdbot Lark Integration Guide: A Step-by-Step Tutorial for Everyone** (relevance: 100%)
-  https://www.youtube.com/watch?v=o5emu0OJt_E
-  ... #feishu #lark 推荐一个目前全网价格最实惠的合租平台，ChatGPT ... bot 章节00:00 背景介绍00:33 启动Clawdbot 00:49 飞书插件安装与
-
 ## 本章小结
 
 - 飞书集成与消息自动化 是 OpenClaw 平台的重要功能。
