@@ -457,6 +457,39 @@ To install OpenClaw skills, use ClawHub or the macOS app, which installs them on
   https://nwosunneoma.medium.com/setting-up-skills-in-openclaw-d043b76303be
   When creating your SKILL.md, ensure that it follows what Openclaw expects — name, description, and metadata. Then I modified AGENTS.md and SOU
 
+
+## 最新动态与补充
+
+> 📅 更新时间: 2026-03-09
+
+### 补充 1
+
+- **OpenClaw Setup Guide: 25 Tools + 53 Skills Explained | WenHao Yu** (relevance: 100%)
+  https://yu-wenhao.com/en/blog/openclaw-tools-skills-tutorial/
+  ![Image 3: OpenClaw concentric circle architecture: Layer 1 core tools (read, write, exec), Layer 2 advanced tools (browser, memory, automation),
+
+### 补充 2
+
+- **Skills - OpenClaw Docs** (relevance: 100%)
+  https://docs.openclaw.ai/platforms/mac/skills
+  OpenClaw home pagelight logodark logo. ##### Platforms overview. ##### macOS companion app. # Skills (macOS). # Skills. The macOS app surfaces OpenClaw skills via the gateway; it does not parse skills lo
+
+### 补充 3
+
+- **7 Essential OpenClaw Skills You Need Right Now - KDnuggets** (relevance: 100%)
+  https://www.kdnuggets.com/7-essential-openclaw-skills-you-need-right-now
+  # 7 Essential OpenClaw Skills You Need Right Now. Skills are what make OpenClaw more than a local assistant, and these are the most popular
+
+### 补充 4
+
+ClawHub is a marketplace for OpenClaw AI agents to publish and share skill bundles. It uses semantic search and is partnered with VirusTotal for security scanning. It helps developers distribute and discover new agent skills.
+
+### 补充 5
+
+- **ClawHub - AI Agent Store** (relevance: 85%)
+  https://aiagentstore.ai/ai-agent/clawhub
+  # ClawHub. ## Overview. Skill registry for OpenClaw agents: publish, version, and install AgentSkills bundles with semantic (vector) search and CLI tooling. ### Best For Professions:. ClawHub is a skill regi
+
 ## 本章小结
 
 - **Skills 安装方式**：掌握 ClawdHub、npx CLI、手动克隆、MCP 集成四种安装方式，按需选择
