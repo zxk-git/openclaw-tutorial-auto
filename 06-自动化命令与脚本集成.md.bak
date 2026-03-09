@@ -561,39 +561,6 @@ curl -sI https://example.com | head -5
 
 ---
 
-
-## 最新动态与补充
-
-> 📅 更新时间: 2026-03-09
-
-### 补充 1
-
-OpenClaw automates tasks using cron jobs scheduled via CLI commands like `openclaw cron add`. These jobs can run isolated or as system events, and can deliver outputs to channels. Cron jobs are configured with specific timings and messages.
-
-### 补充 2
-
-- **OpenClaw Cron Jobs Explained: No Code Automation - YouTube** (relevance: 100%)
-  https://www.youtube.com/watch?v=oMObV_qstkA
-  Discover how to automate your workflow using OpenClaw cron jobs. This quick tutorial explains how to schedule background tasks,
-
-### 补充 3
-
-- **OpenClaw Workflow and Automation - The Developer Guide** (relevance: 100%)
-  https://www.devshorts.in/p/openclaw-workflow-and-automation
-  ### How I use OpenClaw in my daily workflow. OpenClaw already has clear documentation for Slack app setup. Once the Slack App is created, use openclaw config
-
-### 补充 4
-
-- **Cron Jobs - OpenClaw** (relevance: 100%)
-  https://docs.openclaw.ai/automation/cron-jobs
-  # ​ Cron jobs (Gateway scheduler). openclaw cron run <job-id>. openclaw cron runs --id <job-id>`. ## ​ Tool-call equivalents (Gateway cron tool). ## ​ Where cron jobs are stored. ## ​ Beginner-friendly ove
-
-### 补充 5
-
-- **Can OpenClaw schedule automated tasks (cron-triggered jobs)** (relevance: 100%)
-  https://www.tencentcloud.com/techpedia/141092
-  If your agent needs to read files, run commands, and connect to chat apps, isolation stops being optional. is a practical question — let’s answer it in a way you can
-
 ## 本章小结
 
 本章系统介绍了 OpenClaw 的自动化命令与脚本集成能力：

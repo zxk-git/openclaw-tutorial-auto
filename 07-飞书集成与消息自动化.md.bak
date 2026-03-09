@@ -403,39 +403,6 @@ A: OpenClaw 会自动将飞书消息中的文件和图片下载到 `~/.openclaw/
 
 ---
 
-
-## 最新动态与补充
-
-> 📅 更新时间: 2026-03-09
-
-### 补充 1
-
-OpenClaw integrates with Feishu/Lark bots for seamless task automation. It connects via WebSocket without public servers. This setup allows OpenClaw to function within Feishu/Lark's ecosystem.
-
-### 补充 2
-
-- **shubhankargokhale/feishu-openclaw - GitHub** (relevance: 89%)
-  https://github.com/shubhankargokhale/feishu-openclaw
-  feishu-openclaw is an application that connects your Feishu/Lark bot to openclaw, enabling you to run tasks easily and efficiently without complex setups. Is it
-
-### 补充 3
-
-- **Connect OpenClaw to Feishu/Lark: Bring Your AI Assistant into ...** (relevance: 84%)
-  https://open.substack.com/pub/zerofuturetech/p/connect-openclaw-to-feishulark-bring?r=5c8syw&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true
-  # Connect OpenClaw to Feishu/Lark: Bring Your AI Assistan
-
-### 补充 4
-
-- **Feishu/Lark Bot to Openclaw Connector - Claude Skill - agentskill.work** (relevance: 84%)
-  https://agentskill.work/en/skills/AlexAnys/feishu-openclaw
-  Connect Feishu/Lark bots to openclaw (Clawdbot) without public servers, domains, or ngrok. A Claude Skill that connects Feishu/Lark bots to ope
-
-### 补充 5
-
-- **The Complete clawd-feishu Plugin Guide | Efficient Coder - 高效码农** (relevance: 82%)
-  https://www.xugj520.cn/en/archives/feishu-chatbot-plugin-integration-guide.html
-  This guide aims to answer one core question: **How can you quickly and securely connect your Clawdbot intelligent assistant to th
-
 ## 本章小结
 
 - **飞书集成概述**：理解 WebSocket 架构和支持的功能矩阵
