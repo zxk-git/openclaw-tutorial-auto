@@ -4,7 +4,7 @@
 
 **从零到精通的 OpenClaw Agent 自动化开发指南**
 
-[![Chapters](https://img.shields.io/badge/chapters-20-blue?style=flat-square)](OUTLINE.md) [![Words](https://img.shields.io/badge/words-35%2C000%2B-green?style=flat-square)](.) [![Quality](https://img.shields.io/badge/quality-98.1%2F100-brightgreen?style=flat-square)](.) [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](LICENSE) [![Auto Updated](https://img.shields.io/badge/auto--updated-24%2F7-purple?style=flat-square)](.)
+[![Chapters](https://img.shields.io/badge/chapters-21-blue?style=flat-square)](OUTLINE.md) [![Words](https://img.shields.io/badge/words-35%2C000%2B-green?style=flat-square)](.) [![Quality](https://img.shields.io/badge/quality-98.1%2F100-brightgreen?style=flat-square)](.) [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](LICENSE) [![Auto Updated](https://img.shields.io/badge/auto--updated-24%2F7-purple?style=flat-square)](.)
 
 *本教程由 AI Agent 自动生成、持续优化，覆盖 OpenClaw 安装部署、Skills 开发、自动化集成到企业级实战的完整知识体系。*
 
@@ -62,6 +62,12 @@
 | 18 | 性能优化与规模化部署 | ⭐⭐⭐⭐ | Token 优化、并发管理、监控告警 |
 | 19 | 团队协作与企业部署 | ⭐⭐⭐ | 多用户权限、私有化部署、安全合规 |
 | 20 | OpenClaw 生态与未来展望 | ⭐⭐ | 开源生态、社区贡献、行业趋势 |
+
+### 附录：实战专题
+
+| # | 章节 | 难度 | 简介 |
+|---|------|------|------|
+| 21 | [多飞书多Agent实战配置](21-多飞书多Agent实战配置.md) | ⭐⭐⭐⭐ | 多飞书App配置、独立Agent创建、路由绑定、工作空间隔离 |
 
 > 📋 **[查看完整大纲（含子节与练习）](OUTLINE.md)**
 
