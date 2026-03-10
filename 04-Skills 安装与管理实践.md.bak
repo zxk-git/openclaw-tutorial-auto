@@ -490,6 +490,37 @@ ClawHub is a marketplace for OpenClaw AI agents to publish and share skill bundl
   https://aiagentstore.ai/ai-agent/clawhub
   # ClawHub. ## Overview. Skill registry for OpenClaw agents: publish, version, and install AgentSkills bundles with semantic (vector) search and CLI tooling. ### Best For Professions:. ClawHub is a skill regi
 
+
+## 最新动态与补充
+
+> 📅 更新时间: 2026-03-10
+
+### 补充 1
+
+OpenClaw skills are modular components that enhance AI agent functionality; they are installed via `npx clawhub install <skill-slug>`. Skills are managed remotely on the gateway host, not locally on macOS.
+
+### 补充 2
+
+- **Skills - OpenClaw Docs** (relevance: 80%)
+  https://docs.openclaw.ai/platforms/mac/skills
+  OpenClaw home pagelight logodark logo. ##### Platforms overview. ##### macOS companion app. # Skills (macOS). # Skills. The macOS app surfaces OpenClaw skills via the gateway; it does not parse skills loc
+
+### 补充 3
+
+- **Best Openclaw Skills You Should Install (From ClawHub's 500+ Skills)** (relevance: 76%)
+  https://www.reddit.com/r/AI_Agents/comments/1r2u356/best_openclaw_skills_you_should_install_from/
+  [Skip to main content](https://www.reddit.com/r/AI_Agents/comments/1r2u356/best_openclaw_skills_you_should
+
+### 补充 4
+
+- **What are OpenClaw Skills? A 2026 Developer's Guide | DigitalOcean** (relevance: 75%)
+  https://www.digitalocean.com/resources/articles/what-are-openclaw-skills
+  # What are OpenClaw Skills? OpenClaw skills are designed to make working with OpenClaw’s AI agents more practical, modular, and powerf
+
+### 补充 5
+
+ClawHub is a marketplace for OpenClaw agents, allowing developers to publish and version AgentSkills bundles. It uses semantic search and scanning by VirusTotal to enhance security. Beware of malicious skills disguised as legitimate tools.
+
 ## 本章小结
 
 - **Skills 安装方式**：掌握 ClawdHub、npx CLI、手动克隆、MCP 集成四种安装方式，按需选择
