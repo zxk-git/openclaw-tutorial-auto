@@ -1006,6 +1006,39 @@ vim ~/.openclaw/workspace/memory/2026-03-06-my-memory.md
 
 ---
 
+
+## 最新动态与补充
+
+> 📅 更新时间: 2026-03-10
+
+### 补充 1
+
+OpenClaw's memory system uses vector embeddings for semantic search, combining BM25 and vector search for efficient retrieval. It supports per-agent SQLite storage and experimental QMD backend. Memory tools include automatic flushing and vector memory search.
+
+### 补充 2
+
+- **Deep Dive: How OpenClaw's Memory System Works | Study Notes** (relevance: 86%)
+  https://snowan.gitbook.io/study-notes/ai-blogs/openclaw-memory-system-deep-dive
+  ### [](https://snowan.gitbook.io/study-notes/ai-blogs/openclaw-memory-system-deep-dive#id-1.-ephemeral-memory-daily-logs). ### [](htt
+
+### 补充 3
+
+- **Memory - OpenClaw Docs** (relevance: 77%)
+  https://docs.openclaw.ai/concepts/memory
+  [Skip to main content](https://docs.openclaw.ai/concepts/memory#content-area). *   [Memory](https://docs.openclaw.ai/concepts/memory). *   [Memory](https://docs.openclaw.ai/concepts/memory#memory). *   [Memory
+
+### 补充 4
+
+- **memory - OpenClaw Docs** (relevance: 68%)
+  https://docs.openclaw.ai/cli/memory
+  * PTY and Process Supervision Plan. # memory. # `openclaw memory`. Manage semantic memory indexing and search. Provided by the active memory plugin (default: `memory-core`; set `plugins.slots.memory = "none"` to di
+
+### 补充 5
+
+- **OpenClaw Memory Optimization Suite: Moving from Fuzzy RAG to ...** (relevance: 65%)
+  https://bluedot.it.com/blog/openclaw-memory-optimization-suite
+  This is a standalone, MIT-licensed tool that provides: Interactive Topology: A real-time graph of your agent's knowledge base. Direct Live-Edit:
+
 ## 本章小结
 
 - **三种记忆**：工作记忆（会话级）、短期记忆（天/周级）、长期记忆（永久），从临时到持久逐级沉淀。
