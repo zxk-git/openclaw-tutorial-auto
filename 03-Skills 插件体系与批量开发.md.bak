@@ -579,6 +579,39 @@ OpenClaw is an open-source framework for developing AI agents, and its skills ar
   https://www.digitalocean.com/resources/articles/what-are-openclaw-skills
   # What are OpenClaw Skills? OpenClaw skills are designed to make working with OpenClaw’s AI agents more practical, modular, and powerf
 
+
+## 最新动态与补充
+
+> 📅 更新时间: 2026-03-09
+
+### 补充 1
+
+- **Plugins - OpenClaw Docs** (relevance: 72%)
+  https://docs.openclaw.ai/tools/plugin
+  # Plugins. # ​ Plugins (Extensions). ## ​ Quick start (new to plugins?). `openclaw plugins install @openclaw/voice-call`. ## ​ Available plugins (official). ## ​ Plugin SDK import paths. `openclaw/plugin-sdk/cop
+
+### 补充 2
+
+- **Skills - OpenClaw Docs** (relevance: 64%)
+  https://docs.openclaw.ai/tools/skills
+  ##### Skills. # Skills. # ​ Skills (OpenClaw). ## ​ Locations and precedence. ## ​ Per-agent vs shared skills. ## ​ Plugins + skills. ## ​ ClawHub (install + sync). ## ​ Security notes. ## ​ Format (AgentSkills +
+
+### 补充 3
+
+- **What are OpenClaw Skills? A 2026 Developer's Guide | DigitalOcean** (relevance: 62%)
+  https://www.digitalocean.com/resources/articles/what-are-openclaw-skills
+  # What are OpenClaw Skills? OpenClaw skills are designed to make working with OpenClaw’s AI agents more practical, modular, and powerf
+
+### 补充 4
+
+OpenClaw skills are Markdown files defining agent behaviors. To publish, use `clawhub publish`. Follow OpenClaw's CLI for missing requirements.
+
+### 补充 5
+
+- **Building Custom OpenClaw Skills: A Hands-On Tutorial - DataCamp** (relevance: 100%)
+  https://www.datacamp.com/es/tutorial/building-open-claw-skills
+  Learn how to build OpenClaw skills from scratch, connect external APIs, configure Docker sandboxing, and publish to ClawHub in this step-by-step
+
 ## 本章小结
 
 本章系统讲解了 OpenClaw Skills 插件体系的核心知识：

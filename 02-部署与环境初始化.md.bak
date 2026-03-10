@@ -509,6 +509,39 @@ OpenClaw is an open-source AI assistant that can be deployed on a VPS using Dock
   https://zeabur.com/templates/VTZ4FX
   You can also add `ZEABUR_AI_HUB_API_KEY` later via **Variables** tab in Zeabur dashboard (restart service after adding). * **Terminal**: Open **Command** in Zeabur dashboard, run `openclaw pairing approve
 
+
+## 最新动态与补充
+
+> 📅 更新时间: 2026-03-09
+
+### 补充 1
+
+- **How to Deploy and Configure OpenClaw on a VPS - DeployHQ** (relevance: 100%)
+  https://www.deployhq.com/blog/deploy-configure-openclaw-vps
+  This guide walks you through setting up OpenClaw on a Ubuntu VPS from scratch: provisioning, security hardening, Nginx with SSL, systemd service management
+
+### 补充 2
+
+- **OpenClaw Installation and Deployment: The Complete Guide for ...** (relevance: 100%)
+  https://blog.laozhang.ai/en/posts/openclaw-installation-deployment-guide
+  OpenClaw is an open-source personal AI assistant (MIT license, 60,000+ GitHub stars as of January 2026) that connects your favorite LL
+
+### 补充 3
+
+- **OpenClaw Deployment 7-Step Hands-on Tutorial - Tencent Cloud** (relevance: 100%)
+  https://www.tencentcloud.com/techpedia/139939
+  Technology Encyclopedia Home >OpenClaw Deployment 7-Step Hands-on Tutorial. # OpenClaw Deployment 7-Step Hands-on Tutorial. Just **7 concrete steps** to get OpenClaw
+
+### 补充 4
+
+OpenClaw is an open-source AI agent gateway transforming messaging platforms into automation interfaces. It includes security hardenings and supports Apple Watch for ambient AI interaction. For setup, refer to the official documentation.
+
+### 补充 5
+
+- **OpenClaw 2026.2.19: Technical Deep Dive & Security Analysis** (relevance: 87%)
+  https://atalupadhyay.wordpress.com/2026/02/21/openclaw-2026-2-19-technical-deep-dive-security-analysis/
+  ## What Is OpenClaw, Really? OpenClaw is an **open-source AI agent gateway**—a middleware layer that transfor
+
 ## 本章小结
 
 - OpenClaw 支持本地单机、Docker 容器、分布式集群等多种部署模式，可按需选择。

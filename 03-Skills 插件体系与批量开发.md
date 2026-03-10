@@ -612,6 +612,37 @@ OpenClaw skills are Markdown files defining agent behaviors. To publish, use `cl
   https://www.datacamp.com/es/tutorial/building-open-claw-skills
   Learn how to build OpenClaw skills from scratch, connect external APIs, configure Docker sandboxing, and publish to ClawHub in this step-by-step
 
+
+## 最新动态与补充
+
+> 📅 更新时间: 2026-03-10
+
+### 补充 1
+
+OpenClaw is an open-source framework for developing WhatsApp bots with custom skills and plugins. It supports integration with various APIs and tools. To develop skills and plugins, use the OpenClaw documentation.
+
+### 补充 2
+
+- **Plugins - OpenClaw Docs** (relevance: 72%)
+  https://docs.openclaw.ai/tools/plugin
+  # Plugins. # ​ Plugins (Extensions). ## ​ Quick start (new to plugins?). `openclaw plugins install @openclaw/voice-call`. ## ​ Available plugins (official). ## ​ Plugin SDK import paths. `openclaw/plugin-sdk/cop
+
+### 补充 3
+
+- **OpenClaw custom API integration guide for skills and plugins** (relevance: 72%)
+  https://lumadock.com/tutorials/openclaw-custom-api-integration-guide
+  # OpenClaw custom API integration guide for skills and plugins. OpenClaw custom API integration guide for skills and plugins - OpenClaw custom
+
+### 补充 4
+
+- **OpenClaw Application Marketplace - Pre-built Skills and Plugins ...** (relevance: 67%)
+  https://www.tencentcloud.com/techpedia/140807
+  * **n8n Bridge Skill** — Connects OpenClaw to n8n workflows for complex multi-step automations. The Tencent Cloud Lighthouse Special Offer page currently has c
+
+### 补充 5
+
+OpenClaw skills are modular markdown files that automate tasks for AI agents. They can be created by developers and installed via `npx clawhub install <skill-slug>`. To publish a skill, use `clawhub publish` followed by the skill's path.
+
 ## 本章小结
 
 本章系统讲解了 OpenClaw Skills 插件体系的核心知识：
