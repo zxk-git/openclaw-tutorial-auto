@@ -239,7 +239,7 @@ openclaw channels list
 
 正确输出应显示两个账号：
 
-```
+```text
 Chat channels:
 - Feishu coding-bot (Coding Bot): configured, enabled
 - Feishu default: configured, enabled
@@ -253,7 +253,7 @@ openclaw channels status --probe
 
 期望输出：
 
-```
+```text
 - Feishu coding-bot (Coding Bot): enabled, configured, running, works
 - Feishu default: enabled, configured, running, works
 ```text
@@ -295,7 +295,7 @@ openclaw agents
 
 期望输出：
 
-```
+```yaml
 Agents:
 - main (default)
   Identity: 🤖 小光 (IDENTITY.md)
