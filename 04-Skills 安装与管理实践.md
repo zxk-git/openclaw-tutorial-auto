@@ -627,6 +627,41 @@ To install OpenClaw skills, use the ClawHub CLI: `npm i -g clawdhub`, then `claw
 
 ClawHub is a marketplace for OpenClaw agents to publish and sell skills. It uses semantic search and CLI tools. It has been audited and found to have security risks.
 
+
+## 最新动态与补充
+
+> 📅 更新时间: 2026-03-11
+
+### 补充 1
+
+- **Best Openclaw Skills You Should Install (From ClawHub's 500+ Skills)** (relevance: 80%)
+  https://www.reddit.com/r/AI_Agents/comments/1r2u356/best_openclaw_skills_you_should_install_from/
+  # Best Openclaw Skills You Should Install (From ClawHub's 500+ Skills). your agent can create issues, revi
+
+### 补充 2
+
+- **Skills - OpenClaw Docs** (relevance: 79%)
+  https://docs.openclaw.ai/tools/skills
+  ##### Skills. # Skills. # ​ Skills (OpenClaw). ## ​ Locations and precedence. ## ​ Per-agent vs shared skills. ## ​ Plugins + skills. ## ​ ClawHub (install + sync). ## ​ Security notes. ## ​ Format (AgentSkills +
+
+### 补充 3
+
+- **How to Install OpenClaw: Step-by-Step Guide (Formerly ClawdBot ...** (relevance: 74%)
+  https://blog.promptlayer.com/how-to-install-openclaw-step-by-step-guide-formerly-clawdbot-moltbot/
+  OpenClaw is a self-hosted agent gateway that connects large language models to your local system and messag
+
+### 补充 4
+
+- **ClawHub - AI Agent Store** (relevance: 87%)
+  https://aiagentstore.ai/ai-agent/clawhub
+  # ClawHub. Skill registry for OpenClaw agents: publish, version, and install AgentSkills bundles with semantic (vector) search and CLI tooling. ClawHub is a skill registry/marketplace built for OpenClaw-styl
+
+### 补充 5
+
+- **3 ways to make money with OpenClaw in 2026 This AI tool is ...** (relevance: 69%)
+  https://www.facebook.com/Hostinger/videos/make-money-with-openclaw/922951627124695/
+  Second you can build and sell skills. So OpenClaw has a marketplace called Claw Hub. So if you build a skill for Example somet
+
 ## 本章小结
 
 - **Skills 安装方式**：掌握 ClawdHub、npx CLI、手动克隆、MCP 集成四种安装方式，按需选择

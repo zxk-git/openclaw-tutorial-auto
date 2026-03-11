@@ -758,6 +758,41 @@ OpenClaw skills are modular markdown files that automate tasks for AI agents. Th
 
 An OpenClaw SKILL.md file defines a skill's metadata and instructions, including YAML frontmatter and Markdown instructions. Essential components include a name and description, and it can include scripts, references, and assets. To publish, use the clawhub command.
 
+
+## 最新动态与补充
+
+> 📅 更新时间: 2026-03-11
+
+### 补充 1
+
+- **OpenClaw Application Marketplace - Pre-built Skills and Plugins ...** (relevance: 67%)
+  https://www.tencentcloud.com/techpedia/140807
+  * **n8n Bridge Skill** — Connects OpenClaw to n8n workflows for complex multi-step automations. The Tencent Cloud Lighthouse Special Offer page currently has c
+
+### 补充 2
+
+- **Skills - OpenClaw Docs** (relevance: 64%)
+  https://docs.openclaw.ai/tools/skills
+  ##### Skills. # Skills. # ​ Skills (OpenClaw). ## ​ Locations and precedence. ## ​ Per-agent vs shared skills. ## ​ Plugins + skills. ## ​ ClawHub (install + sync). ## ​ Security notes. ## ​ Format (AgentSkills +
+
+### 补充 3
+
+- **What are OpenClaw Skills? A 2026 Developer's Guide | DigitalOcean** (relevance: 62%)
+  https://www.digitalocean.com/resources/articles/what-are-openclaw-skills
+  # What are OpenClaw Skills? OpenClaw skills are designed to make working with OpenClaw’s AI agents more practical, modular, and powerf
+
+### 补充 4
+
+- **Skills - OpenClaw Docs** (relevance: 100%)
+  https://docs.openclaw.ai/tools/skills
+  ##### Skills. # Skills. # ​ Skills (OpenClaw). ## ​ Locations and precedence. ## ​ Per-agent vs shared skills. ## ​ Plugins + skills. ## ​ ClawHub (install + sync). ## ​ Security notes. ## ​ Format (AgentSkills
+
+### 补充 5
+
+- **openclaw/skills/skill-creator/SKILL.md at main - GitHub** (relevance: 100%)
+  https://github.com/openclaw/openclaw/blob/main/skills/skill-creator/SKILL.md
+  ## About Skills. skill-name/ ├── SKILL.md (required) │ ├── YAML frontmatter metadata (required) │ │ ├── name: (required) │ │ └── descriptio
+
 ## 本章小结
 
 本章系统讲解了 OpenClaw Skills 插件体系的核心知识：
