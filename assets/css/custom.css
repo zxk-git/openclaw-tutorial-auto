@@ -36,6 +36,8 @@
 /* ---------- Reset & Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   padding: 0;
@@ -47,6 +49,12 @@ body {
 
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+/* Focus visible ring for accessibility */
+:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
 
 /* ---------- Header ---------- */
 .site-header {
@@ -282,6 +290,21 @@ a:hover { text-decoration: underline; }
   flex-shrink: 0;
 }
 
+/* Nav center links (目录 / 大纲) */
+#nav-center {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+.nav-mid-link {
+  color: var(--fg-secondary);
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+.nav-mid-link:hover { color: var(--link); text-decoration: none; }
+.nav-sep { color: var(--fg-secondary); opacity: 0.5; }
+
 /* ---------- Back to Top ---------- */
 #back-to-top {
   display: none;
@@ -314,15 +337,73 @@ a:hover { text-decoration: underline; }
 }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .chapter-nav {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.6rem;
+  }
+  .nav-link { max-width: 35%; }
+}
+
 @media (max-width: 600px) {
   .project-name { font-size: 1.5rem; }
   .project-tagline { font-size: 0.95rem; }
   .toolbar { flex-direction: column; }
   .search-container { max-width: 100%; }
   .main-content { padding: 1rem 0.8rem 2rem; }
+  .chapter-nav { font-size: 0.75rem; gap: 0.3rem; }
+  #nav-center { display: none; }  /* Hide middle links on small screens */
 }
 
 /* ---------- Scroll to Top ---------- */
 .markdown-body h1:first-child {
   margin-top: 0;
+}
+
+/* ---------- Code Copy Button ---------- */
+.copy-btn {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  background: var(--card-bg);
+  color: var(--fg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s, background 0.2s;
+  z-index: 1;
+}
+pre:hover .copy-btn { opacity: 1; }
+.copy-btn:hover { background: var(--link); color: #fff; border-color: var(--link); }
+
+/* ---------- Details / Summary ---------- */
+.markdown-body details {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  background: var(--card-bg);
+}
+.markdown-body details[open] { padding-bottom: 1rem; }
+.markdown-body summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--fg);
+  padding: 0.3rem 0;
+  user-select: none;
+}
+.markdown-body summary:hover { color: var(--link); }
+
+/* ---------- Print Styles ---------- */
+@media print {
+  .site-header, .toolbar, #chapter-nav, #back-to-top,
+  #progress-bar, .site-footer, .copy-btn { display: none !important; }
+  .main-content { max-width: 100%; padding: 0; margin: 0; }
+  .markdown-body { font-size: 11pt; }
+  .markdown-body pre { border: 1px solid #ccc; page-break-inside: avoid; }
+  a { color: inherit; text-decoration: underline; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; }
 }

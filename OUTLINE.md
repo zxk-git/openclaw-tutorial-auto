@@ -2,15 +2,15 @@
 
 # 🦞 OpenClaw 实战教程 · 完整大纲
 
-**从零到精通 · 21 章 + 18 Skills 教程 · 覆盖 OpenClaw 全能力域**
+**从零到精通 · 25 章 + 18 Skills 教程 · 覆盖 OpenClaw 全能力域**
 
-[![Chapters](https://img.shields.io/badge/chapters-21-blue?style=for-the-badge)](README.md)
+[![Chapters](https://img.shields.io/badge/chapters-25-blue?style=for-the-badge)](README.md)
 [![Skills](https://img.shields.io/badge/skills-18-ff69b4?style=for-the-badge)](skills-tutorials/README.md)
-[![Quality](https://img.shields.io/badge/quality-98.1%2F100-brightgreen?style=for-the-badge)](.)
+[![Quality](https://img.shields.io/badge/quality-100%2F100-brightgreen?style=for-the-badge)](.)
 
 </div>
 
-> **版本**: v5.0 &nbsp;|&nbsp; **总章节**: 21 + 18 Skills 教程 &nbsp;|&nbsp; **持续自动更新**
+> **版本**: v5.5 &nbsp;|&nbsp; **总章节**: 25 + 18 Skills 教程 &nbsp;|&nbsp; **持续自动更新**
 >
 > 💡 **图标说明** &nbsp; 📖 理论讲解 &nbsp;|&nbsp; 💻 实战操作 &nbsp;|&nbsp; 🧪 练习任务
 
@@ -19,17 +19,17 @@
 ## 🗺️ 学习路线图
 
 ```
-  ┌──────────────────────────────────────────────────────────────────┐
-  │                    🦞 OpenClaw 学习路线                          │
-  ├──────────┬──────────┬──────────────┬─────────────────────────────┤
-  │  🟢 入门  │  🔵 核心  │   🟣 进阶     │       🔴 专家              │
-  │  Ch 1-5  │  Ch 6-10 │  Ch 11-15   │       Ch 16-21             │
-  │  ~5 小时  │  ~8 小时  │  ~10 小时    │       ~12 小时             │
-  ├──────────┼──────────┼──────────────┼─────────────────────────────┤
-  │ 安装部署  │ 自动化    │ 第三方集成   │  MCP / 浏览器              │
-  │ Skills   │ 飞书集成  │ 安全/Memory  │  性能优化 / 企业部署        │
-  │ ClawHub  │ 多 Agent   │ CI/CD       │  生态展望 / 多飞书实战      │
-  └──────────┴──────────┴──────────────┴─────────────────────────────┘
+  ┌───────────────────────────────────────────────────────────────────────────────┐
+  │                          🦞 OpenClaw 学习路线                                │
+  ├──────────┬──────────┬──────────────┬──────────────┬──────────────────────────┤
+  │ 🟢 入门   │ 🔵 核心   │ 🟣 进阶      │ 🔴 高级      │ 🛠️ 实战专题             │
+  │ Ch 1-5   │ Ch 6-10  │ Ch 11-15    │ Ch 16-20    │ Ch 21-25               │
+  │ ~78 min  │ ~68 min  │ ~86 min     │ ~102 min    │ ~62 min                │
+  ├──────────┼──────────┼──────────────┼──────────────┼──────────────────────────┤
+  │ 安装部署  │ 自动化    │ 第三方集成   │ MCP / 浏览器  │ 多飞书 / Canvas         │
+  │ Skills   │ 飞书集成  │ 安全/Memory  │ 性能 / 企业   │ 人格 / 多模态           │
+  │ ClawHub  │ 多 Agent  │ CI/CD       │ 生态展望      │ 进阶开发               │
+  └──────────┴──────────┴──────────────┴──────────────┴──────────────────────────┘
 ```
 
 ---

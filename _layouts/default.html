@@ -4,7 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <!-- Favicon (emoji lobster) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='85'>🦞</text></svg>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   <script>
@@ -33,7 +43,7 @@
   <!-- Search + Theme Toggle -->
   <div class="toolbar">
     <div class="search-container" id="search-box">
-      <input type="text" id="search-input" placeholder="🔍 搜索章节..." autocomplete="off" />
+      <input type="text" id="search-input" placeholder="🔍 搜索章节… (Ctrl+K)" autocomplete="off" />
       <div id="search-results"></div>
     </div>
     <button id="theme-toggle" title="切换暗色/亮色模式" aria-label="Toggle dark mode">🌙</button>
@@ -42,7 +52,11 @@
   <!-- Chapter Navigation Bar (shown on chapter pages) -->
   <nav id="chapter-nav" class="chapter-nav" style="display:none">
     <a id="nav-prev" class="nav-link nav-prev" href="#">← 上一章</a>
-    <span id="nav-current" class="nav-current"></span>
+    <span id="nav-center">
+      <a id="nav-toc" href="{{ '/' | relative_url }}" class="nav-mid-link">📑 目录</a>
+      <span class="nav-sep">·</span>
+      <a id="nav-outline" href="OUTLINE.html" class="nav-mid-link">📋 大纲</a>
+    </span>
     <a id="nav-next" class="nav-link nav-next" href="#">下一章 →</a>
   </nav>
 
@@ -149,19 +163,19 @@
     if (idx === -1) return;
     var nav = document.getElementById('chapter-nav');
     var prev = document.getElementById('nav-prev');
-    var curr = document.getElementById('nav-current');
     var next = document.getElementById('nav-next');
     nav.style.display = 'flex';
-    curr.textContent = '第 ' + num + ' 章 / 25';
     if (idx > 0) {
-      prev.href = CH[idx-1].u + '.html';
-      prev.textContent = '← ' + CH[idx-1].t;
+      prev.href = encodeURI(CH[idx-1].u) + '.html';
+      prev.textContent = '← 第 ' + CH[idx-1].n + ' 章';
+      prev.title = CH[idx-1].t;
     } else {
       prev.style.visibility = 'hidden';
     }
     if (idx < CH.length - 1) {
-      next.href = CH[idx+1].u + '.html';
-      next.textContent = CH[idx+1].t + ' →';
+      next.href = encodeURI(CH[idx+1].u) + '.html';
+      next.textContent = '第 ' + CH[idx+1].n + ' 章 →';
+      next.title = CH[idx+1].t;
     } else {
       next.style.visibility = 'hidden';
     }
@@ -185,6 +199,42 @@
     });
     btn.addEventListener('click', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+
+  // === Keyboard shortcut: Ctrl+K or ⌘+K to focus search ===
+  (function() {
+    document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        var input = document.getElementById('search-input');
+        input.focus();
+        input.select();
+      }
+      if (e.key === 'Escape') {
+        document.getElementById('search-input').blur();
+        document.getElementById('search-results').style.display = 'none';
+      }
+    });
+  })();
+
+  // === Copy button for code blocks ===
+  (function() {
+    document.querySelectorAll('.markdown-body pre').forEach(function(pre) {
+      var btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.textContent = '复制';
+      btn.title = '复制代码';
+      btn.addEventListener('click', function() {
+        var code = pre.querySelector('code');
+        var text = code ? code.textContent : pre.textContent;
+        navigator.clipboard.writeText(text).then(function() {
+          btn.textContent = '✓ 已复制';
+          setTimeout(function(){ btn.textContent = '复制'; }, 2000);
+        });
+      });
+      pre.style.position = 'relative';
+      pre.appendChild(btn);
     });
   })();
   </script>

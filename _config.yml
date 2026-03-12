@@ -1,9 +1,24 @@
 title: OpenClaw 实战教程
-description: 从入门到精通 — 25 章完整学习路径
+description: 从入门到精通 — 25 章系统化实战指南
+url: https://zxk-git.github.io
+baseurl: /openclaw-tutorial
 remote_theme: pages-themes/cayman@v0.2.0
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
 
 plugins:
   - jekyll-remote-theme
+
+# SEO defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
 
 exclude:
   - "*.bak"
@@ -17,4 +32,3 @@ exclude:
   - "push-wiki.sh"
   - "skills-tutorials/"
   - "wiki/"
-  - "OUTLINE.md"
