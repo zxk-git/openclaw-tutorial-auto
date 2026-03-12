@@ -516,7 +516,7 @@
 <td align="center"><b>21</b></td>
 <td>
 
-[**多飞书多 Agent 实战配置**](21-多飞书多 Agent 实战配置.md)
+[**多飞书多 Agent 实战配置**](21-多飞书多Agent实战配置.md)
 
 </td>
 <td align="center">⭐⭐⭐⭐</td>

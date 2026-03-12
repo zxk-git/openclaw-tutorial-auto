@@ -1,6 +1,6 @@
 <div align="center">
 
-[← 第 19 章](19-团队协作与企业部署.md) · [📑 目录](README.md) · [📋 大纲](OUTLINE.md) · [第 21 章 →](21-多飞书多 Agent 实战配置.md)
+[← 第 19 章](19-团队协作与企业部署.md) · [📑 目录](README.md) · [📋 大纲](OUTLINE.md) · [第 21 章 →](21-多飞书多Agent实战配置.md)
 
 </div>
 
@@ -972,6 +972,6 @@ pip install langchain crewai
 
 <div align="center">
 
-[← 上一章：团队协作与企业部署](19-团队协作与企业部署.md) · [📑 返回目录](README.md) · [下一章：多飞书多 Agent 实战配置 →](21-多飞书多 Agent 实战配置.md)
+[← 上一章：团队协作与企业部署](19-团队协作与企业部署.md) · [📑 返回目录](README.md) · [下一章：多飞书多 Agent 实战配置 →](21-多飞书多Agent实战配置.md)
 
 </div>
