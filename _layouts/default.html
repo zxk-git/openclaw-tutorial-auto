@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   <script>
-    // Apply saved theme ASAP to prevent flash
     (function(){
       var t = localStorage.getItem('theme');
       if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -18,6 +17,9 @@
   </script>
 </head>
 <body>
+  <!-- Reading Progress Bar -->
+  <div id="progress-bar"></div>
+
   <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
@@ -37,12 +39,22 @@
     <button id="theme-toggle" title="切换暗色/亮色模式" aria-label="Toggle dark mode">🌙</button>
   </div>
 
+  <!-- Chapter Navigation Bar (shown on chapter pages) -->
+  <nav id="chapter-nav" class="chapter-nav" style="display:none">
+    <a id="nav-prev" class="nav-link nav-prev" href="#">← 上一章</a>
+    <span id="nav-current" class="nav-current"></span>
+    <a id="nav-next" class="nav-link nav-next" href="#">下一章 →</a>
+  </nav>
+
   <!-- Main content -->
   <main class="main-content">
     <div class="markdown-body">
       {{ content }}
     </div>
   </main>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" title="回到顶部" aria-label="Back to top">↑</button>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -53,6 +65,35 @@
   </footer>
 
   <script>
+  // === Chapter data ===
+  var CH = [
+    { n: 1,  t: "OpenClaw 基础介绍与安装", u: "01-基础介绍与安装" },
+    { n: 2,  t: "部署与环境初始化", u: "02-部署与环境初始化" },
+    { n: 3,  t: "Skills 插件体系与批量开发", u: "03-Skills 插件体系与批量开发" },
+    { n: 4,  t: "Skills 安装与管理实践", u: "04-Skills 安装与管理实践" },
+    { n: 5,  t: "ClawHub 平台与技能分发", u: "05-ClawHub 平台与技能分发" },
+    { n: 6,  t: "自动化命令与脚本集成", u: "06-自动化命令与脚本集成" },
+    { n: 7,  t: "飞书集成与消息自动化", u: "07-飞书集成与消息自动化" },
+    { n: 8,  t: "单 Gateway 多 Agent 配置与管理", u: "08-单 Gateway 多 Agent 配置与管理" },
+    { n: 9,  t: "故障排查与日志分析", u: "09-故障排查与日志分析" },
+    { n: 10, t: "持续集成与知识库同步", u: "10-持续集成与知识库同步" },
+    { n: 11, t: "高级场景：第三方平台集成", u: "11-高级场景-第三方平台集成" },
+    { n: 12, t: "实践案例与常见问题", u: "12-实践案例与常见问题" },
+    { n: 13, t: "教程自动更新与仓库维护", u: "13-教程自动更新与仓库维护" },
+    { n: 14, t: "安全与权限管理", u: "14-安全与权限管理" },
+    { n: 15, t: "Memory 记忆系统深入", u: "15-Memory 记忆系统深入" },
+    { n: 16, t: "MCP 工具协议与自定义集成", u: "16-MCP 工具协议与自定义集成" },
+    { n: 17, t: "浏览器自动化与网页交互", u: "17-浏览器自动化与网页交互" },
+    { n: 18, t: "性能优化与规模化部署", u: "18-性能优化与规模化部署" },
+    { n: 19, t: "团队协作与企业部署", u: "19-团队协作与企业部署" },
+    { n: 20, t: "OpenClaw 生态与未来展望", u: "20-OpenClaw 生态与未来展望" },
+    { n: 21, t: "多飞书多 Agent 实战配置", u: "21-多飞书多 Agent 实战配置" },
+    { n: 22, t: "Canvas 可视化交互", u: "22-Canvas 可视化交互" },
+    { n: 23, t: "Agent 人格与行为设计", u: "23-Agent 人格与行为设计" },
+    { n: 24, t: "多模态与媒体处理", u: "24-多模态与媒体处理" },
+    { n: 25, t: "进阶开发实践", u: "25-进阶开发实践" }
+  ];
+
   // === Dark mode toggle ===
   (function() {
     var toggle = document.getElementById('theme-toggle');
@@ -73,46 +114,21 @@
 
   // === Chapter search ===
   (function() {
-    var chapters = [
-      { t: "第一章：OpenClaw 基础介绍与安装", u: "01-基础介绍与安装.html" },
-      { t: "第二章：部署与环境初始化", u: "02-部署与环境初始化.html" },
-      { t: "第 3 章：Skills 插件体系与批量开发", u: "03-Skills 插件体系与批量开发.html" },
-      { t: "第 4 章：Skills 安装与管理实践", u: "04-Skills 安装与管理实践.html" },
-      { t: "第 5 章：ClawHub 平台与技能分发", u: "05-ClawHub 平台与技能分发.html" },
-      { t: "第 6 章：自动化命令与脚本集成", u: "06-自动化命令与脚本集成.html" },
-      { t: "第 7 章：飞书集成与消息自动化", u: "07-飞书集成与消息自动化.html" },
-      { t: "第 8 章：单 Gateway 多 Agent 配置与管理", u: "08-单 Gateway 多 Agent 配置与管理.html" },
-      { t: "第 9 章：故障排查与日志分析", u: "09-故障排查与日志分析.html" },
-      { t: "第 10 章：持续集成与知识库同步", u: "10-持续集成与知识库同步.html" },
-      { t: "第 11 章：高级场景：第三方平台集成", u: "11-高级场景-第三方平台集成.html" },
-      { t: "第 12 章：实践案例与常见问题", u: "12-实践案例与常见问题.html" },
-      { t: "第 13 章：教程自动更新与仓库维护", u: "13-教程自动更新与仓库维护.html" },
-      { t: "第 14 章：安全与权限管理", u: "14-安全与权限管理.html" },
-      { t: "第 15 章：Memory 记忆系统深入", u: "15-Memory 记忆系统深入.html" },
-      { t: "第 16 章：MCP 工具协议与自定义集成", u: "16-MCP 工具协议与自定义集成.html" },
-      { t: "第 17 章：浏览器自动化与网页交互", u: "17-浏览器自动化与网页交互.html" },
-      { t: "第 18 章：性能优化与规模化部署", u: "18-性能优化与规模化部署.html" },
-      { t: "第 19 章：团队协作与企业部署", u: "19-团队协作与企业部署.html" },
-      { t: "第 20 章：OpenClaw 生态与未来展望", u: "20-OpenClaw 生态与未来展望.html" },
-      { t: "第 21 章：多飞书多 Agent 实战配置", u: "21-多飞书多Agent实战配置.html" },
-      { t: "第 22 章：Canvas 可视化交互", u: "22-Canvas 可视化交互.html" },
-      { t: "第 23 章：Agent 人格与行为设计", u: "23-Agent 人格与行为设计.html" },
-      { t: "第 24 章：多模态与媒体处理", u: "24-多模态与媒体处理.html" },
-      { t: "第 25 章：进阶开发实践", u: "25-进阶开发实践.html" }
-    ];
     var input = document.getElementById('search-input');
     var box = document.getElementById('search-results');
     input.addEventListener('input', function() {
       var q = this.value.trim().toLowerCase();
       box.innerHTML = '';
       if (!q) { box.style.display = 'none'; return; }
-      var hits = chapters.filter(function(c){ return c.t.toLowerCase().indexOf(q) !== -1; });
+      var hits = CH.filter(function(c){ return c.t.toLowerCase().indexOf(q) !== -1 || ('第'+c.n+'章').indexOf(q) !== -1; });
       if (!hits.length) {
         box.innerHTML = '<div class="sr-empty">没有匹配的章节</div>';
       } else {
         hits.forEach(function(c){
           var a = document.createElement('a');
-          a.href = c.u; a.textContent = c.t; a.className = 'sr-item';
+          a.href = c.u + '.html';
+          a.textContent = '第 ' + c.n + ' 章：' + c.t;
+          a.className = 'sr-item';
           box.appendChild(a);
         });
       }
@@ -120,6 +136,55 @@
     });
     document.addEventListener('click', function(e){
       if (!document.getElementById('search-box').contains(e.target)) box.style.display = 'none';
+    });
+  })();
+
+  // === Chapter navigation ===
+  (function() {
+    var path = decodeURIComponent(window.location.pathname);
+    var match = path.match(/(\d{2})-/);
+    if (!match) return; // Not a chapter page
+    var num = parseInt(match[1], 10);
+    var idx = CH.findIndex(function(c){ return c.n === num; });
+    if (idx === -1) return;
+    var nav = document.getElementById('chapter-nav');
+    var prev = document.getElementById('nav-prev');
+    var curr = document.getElementById('nav-current');
+    var next = document.getElementById('nav-next');
+    nav.style.display = 'flex';
+    curr.textContent = '第 ' + num + ' 章 / 25';
+    if (idx > 0) {
+      prev.href = CH[idx-1].u + '.html';
+      prev.textContent = '← ' + CH[idx-1].t;
+    } else {
+      prev.style.visibility = 'hidden';
+    }
+    if (idx < CH.length - 1) {
+      next.href = CH[idx+1].u + '.html';
+      next.textContent = CH[idx+1].t + ' →';
+    } else {
+      next.style.visibility = 'hidden';
+    }
+  })();
+
+  // === Reading progress bar ===
+  (function() {
+    var bar = document.getElementById('progress-bar');
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = h > 0 ? (window.scrollY / h * 100) : 0;
+      bar.style.width = pct + '%';
+    });
+  })();
+
+  // === Back to top ===
+  (function() {
+    var btn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function() {
+      btn.style.display = window.scrollY > 400 ? 'block' : 'none';
+    });
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   })();
   </script>
