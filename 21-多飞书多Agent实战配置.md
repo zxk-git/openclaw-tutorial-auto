@@ -6,7 +6,7 @@
 
 # 第 21 章：多飞书多 Agent 实战配置
 
-![difficulty](https://img.shields.io/badge/难度-⭐⭐⭐⭐_高级-red) ![time](https://img.shields.io/badge/阅读时间-17_分钟-blue) ![chapter](https://img.shields.io/badge/章节-21%2F21-purple)
+![difficulty](https://img.shields.io/badge/难度-⭐⭐⭐⭐_高级-red) ![time](https://img.shields.io/badge/阅读时间-19_分钟-blue) ![chapter](https://img.shields.io/badge/章节-21%2F21-purple)
 
 
 > **难度**: ⭐⭐⭐⭐ 高级 | **预计阅读**: 25 分钟 | **前置章节**: [第 7 章](07-飞书集成与消息自动化.md)、[第 8 章](08-单 Gateway 多 Agent 配置与管理.md)
@@ -253,7 +253,10 @@ Chat channels:
 
 ## 深度连接验证
 
+深度验证会对每个渠道执行端到端探测，包括 API 鉴权、Webhook 回调连通性以及 WebSocket 长连接状态检查，确保消息通路完全畅通。
+
 ```bash
+# 执行深度探测（会逐一向各渠道发送测试请求）
 openclaw channels status --probe
 ```
 
@@ -263,6 +266,21 @@ openclaw channels status --probe
 - Feishu coding-bot (Coding Bot): enabled, configured, running, works
 - Feishu default: enabled, configured, running, works
 ```
+
+如果状态显示非 `works`，可进一步排查：
+
+```bash
+# 检查飞书 API 端点连通性
+curl -s -o /dev/null -w "%{http_code}" https://open.feishu.cn/open-apis/bot/v2/hook/ping
+
+# 检查 Gateway 的 WebSocket 连接状态
+openclaw doctor --check websocket
+
+# 查看渠道相关的错误日志
+tail -20 ~/.openclaw/logs/config-audit.jsonl | grep -i feishu
+```
+
+> 💡 **提示**：如果某个渠道显示 `configured` 但非 `works`，通常是飞书 App 的权限配置或事件订阅地址不正确，请回到飞书开放平台检查应用配置。
 
 ---
 
@@ -389,11 +407,20 @@ cp ~/.openclaw/workspace/USER.md ~/.openclaw/workspace-coding/USER.md
 
 ## 删除 BOOTSTRAP.md
 
+`BOOTSTRAP.md` 是 OpenClaw 初始化向导文件，用于首次引导 Agent 完成自我配置。新工作空间创建后，必须删除此文件，否则 Agent 每次启动时都会重复执行引导流程，可能覆盖你已经自定义的配置。
+
 ```bash
+# 删除引导文件
 rm ~/.openclaw/workspace-coding/BOOTSTRAP.md
+
+# 验证文件已被删除
+ls ~/.openclaw/workspace-coding/BOOTSTRAP.md 2>&1
+# 应输出：No such file or directory
 ```
 
-### 创建 memory 目录
+> ⚠️ **注意**：如果忘记删除 `BOOTSTRAP.md`，Agent 在下次对话时会进入引导模式而非正常工作模式。如果误删了其他文件，可通过 `openclaw onboard --agent coding` 重新生成引导文件。
+
+## 创建 memory 目录
 
 ```bash
 mkdir -p ~/.openclaw/workspace-coding/memory
@@ -442,11 +469,35 @@ openclaw agents unbind --agent coding --bind feishu:coding-bot
 
 ## 应用配置
 
+修改路由绑定后，需要重启 Gateway 使新的配置生效。重启过程会短暂中断服务（通常 1-2 秒），请在业务低峰期操作。
+
 ```bash
+# 重启 Gateway 应用新配置
+openclaw gateway restart
+
+# 验证 Gateway 已正常启动
+openclaw daemon status
+# 应显示 running 状态
+
+# 确认新的路由绑定已生效
+openclaw agents
+# 检查输出中 coding Agent 的 Routing 行是否包含新绑定的渠道
+```
+
+如果重启后出现异常，可快速回滚：
+
+```bash
+# 查看配置变更记录
+tail -10 ~/.openclaw/logs/config-audit.jsonl
+
+# 回滚到上一次配置（如果有备份）
+cp ~/.openclaw/openclaw.json.bak ~/.openclaw/openclaw.json
 openclaw gateway restart
 ```
 
-### 验证路由
+> 💡 **提示**：建议在修改配置前先备份当前配置文件：`cp ~/.openclaw/openclaw.json ~/.openclaw/openclaw.json.bak`。
+
+## 验证路由
 
 ```bash
 openclaw agents
