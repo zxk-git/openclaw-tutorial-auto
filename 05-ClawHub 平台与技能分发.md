@@ -6,7 +6,7 @@
 
 # 第 5 章：ClawHub 平台与技能分发
 
-![difficulty](https://img.shields.io/badge/难度-⭐_入门-brightgreen) ![time](https://img.shields.io/badge/阅读时间-14_分钟-blue) ![chapter](https://img.shields.io/badge/章节-05%2F21-purple)
+![difficulty](https://img.shields.io/badge/难度-⭐_入门-brightgreen) ![time](https://img.shields.io/badge/阅读时间-17_分钟-blue) ![chapter](https://img.shields.io/badge/章节-05%2F21-purple)
 
 
 > **难度**: ⭐ 入门 | **预计阅读**: 18 分钟 | **前置章节**: [第 3-4 章](03-Skills 插件体系与批量开发.md)
@@ -215,7 +215,8 @@ npx skills uninstall tavily-search
 npx skills deps tavily-search
 ```
 
-> **注意**：卸载操作不可撤销。如果技能包含自定义配置，建议先备份 `config.yaml` 文件。
+> [!WARNING]
+> 卸载操作不可撤销。如果技能包含自定义配置，建议先备份 `config.yaml` 文件。
 
 ## 安装前后对比
 

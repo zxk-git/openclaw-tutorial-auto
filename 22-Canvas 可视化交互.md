@@ -1,6 +1,6 @@
 <div align="center">
 
-[← 第 21 章](21-多飞书多Agent实战配置.md) · [📑 目录](README.md) · [📋 大纲](OUTLINE.md) · [第 23 章 →](23-Agent 人格与行为设计.md)
+[← 第 21 章](21-多飞书多 Agent 实战配置.md) · [📑 目录](README.md) · [📋 大纲](OUTLINE.md) · [第 23 章 →](23-Agent 人格与行为设计.md)
 
 </div>
 
@@ -19,7 +19,7 @@
 - [22.3 Canvas 交互模式](#223-canvas-交互模式)
 - [22.4 自定义 Canvas 布局](#224-自定义-canvas-布局)
 - [22.5 Canvas 与 Agent 协作](#225-canvas-与-agent-协作)
-- [进阶：Canvas 渲染架构原理](#进阶canvas-渲染架构原理)
+- [进阶：Canvas 渲染架构原理](#进阶 canvas-渲染架构原理)
 - [注意事项与常见错误](#注意事项与常见错误)
 - [实操练习](#实操练习)
 - [常见问题 (FAQ)](#常见问题-faq)
@@ -442,7 +442,7 @@ echo "仪表板已配置，访问 Canvas 的 /dashboard 路径查看"
 
 ### Q3：如何在 Canvas 中显示 Mermaid 图表？
 
-**A**：Canvas 内置了 Mermaid 渲染支持。在 Markdown 中使用 ````mermaid` 代码块即可自动渲染为图形。确保浏览器支持 SVG 渲染。
+**A**：Canvas 内置了 Mermaid 渲染支持。在 Markdown 中使用 ```mermaid` 代码块即可自动渲染为图形。确保浏览器支持 SVG 渲染。
 
 ### Q4：Canvas 可以远程访问吗？
 
@@ -476,6 +476,6 @@ echo "仪表板已配置，访问 Canvas 的 /dashboard 路径查看"
 
 <div align="center">
 
-[← 上一章：多飞书多Agent实战配置](21-多飞书多Agent实战配置.md) · [📑 返回目录](README.md) · [下一章：Agent 人格与行为设计 →](23-Agent 人格与行为设计.md)
+[← 上一章：多飞书多 Agent 实战配置](21-多飞书多 Agent 实战配置.md) · [📑 返回目录](README.md) · [下一章：Agent 人格与行为设计 →](23-Agent 人格与行为设计.md)
 
 </div>
