@@ -422,6 +422,8 @@ ls ~/.openclaw/workspace-coding/BOOTSTRAP.md 2>&1
 
 ## 创建 memory 目录
 
+每个 Agent 工作空间都需要一个独立的 `memory` 目录来存储对话记忆和上下文信息。如果缺少此目录，Agent 在运行时可能会报错或无法正确保存跨会话的记忆数据。创建后无需额外配置，Agent 会在首次对话时自动在该目录下生成所需的索引文件。
+
 ```bash
 mkdir -p ~/.openclaw/workspace-coding/memory
 ```
@@ -499,11 +501,13 @@ openclaw gateway restart
 
 ## 验证路由
 
+完成路由绑定和 Gateway 重启后，务必验证路由配置是否已正确生效。以下命令会列出所有 Agent 及其绑定的渠道信息。如果 Routing 行为空或显示错误的渠道，请检查 `openclaw.json` 中的 `bindings` 配置是否正确，并确认 Gateway 已成功重启。
+
 ```bash
 openclaw agents
 ```
 
-确认 `coding` Agent 的 Routing 行显示 `Feishu coding-bot`。
+确认 `coding` Agent 的 Routing 行显示 `Feishu coding-bot`。如果显示不正确，可运行 `openclaw agents bindings --json` 查看详细的路由映射进行排查。
 
 ---
 

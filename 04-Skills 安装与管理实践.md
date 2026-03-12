@@ -173,7 +173,7 @@ npx skills update tavily-search
 
 ## 版本回退
 
-手动安装的 Skills 支持 Git 回退：
+手动安装的 Skills 支持 Git 回退。当更新后的 Skill 出现兼容性问题或行为异常时，可以通过 Git 快速回退到上一个稳定版本。回退前建议记录当前版本号以便后续追踪，回退后需要重启 Gateway 或重新加载 Agent 以使旧版本生效。如果使用 `clawdhub install` 安装的 Skill，也可以通过指定版本号重新安装来实现降级。
 
 ```bash
 cd ~/.openclaw/workspace/skills/my-skill
@@ -300,6 +300,8 @@ mcporter config add exa https://mcp.exa.ai/mcp
 ```
 
 ## Step 2：验证安装
+
+安装完成后，务必逐一验证每个搜索引擎是否可以正常工作。验证步骤包括确认脚本可执行、API Key 已正确配置、以及网络连通性正常。如果某个引擎测试失败，可先跳过继续验证其他引擎，确保至少有一个可用的搜索后端。
 
 ```bash
 # 测试 Tavily
