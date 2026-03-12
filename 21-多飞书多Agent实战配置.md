@@ -1,6 +1,6 @@
 <div align="center">
 
-[← 第 20 章](20-OpenClaw 生态与未来展望.md) · [📑 目录](README.md) · [📋 大纲](OUTLINE.md)
+[← 第 20 章](20-OpenClaw 生态与未来展望.md) · [📑 目录](README.md) · [📋 大纲](OUTLINE.md) · [第 22 章 →](22-Canvas 可视化交互.md)
 
 </div>
 
@@ -841,6 +841,6 @@ python3 -m json.tool ~/.openclaw/openclaw.json
 
 <div align="center">
 
-[← 上一章：OpenClaw 生态与未来展望](20-OpenClaw 生态与未来展望.md) · [📑 返回目录](README.md)
+[← 上一章：OpenClaw 生态与未来展望](20-OpenClaw 生态与未来展望.md) · [📑 返回目录](README.md) · [下一章：Canvas 可视化交互 →](22-Canvas 可视化交互.md)
 
 </div>
