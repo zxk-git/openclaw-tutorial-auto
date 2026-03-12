@@ -1,0 +1,20 @@
+title: OpenClaw 实战教程
+description: 从入门到精通 — 25 章完整学习路径
+remote_theme: pages-themes/cayman@v0.2.0
+
+plugins:
+  - jekyll-remote-theme
+
+exclude:
+  - "*.bak"
+  - "*.backup"
+  - "*.orig"
+  - ".automation-report.md"
+  - ".task-logs/"
+  - ".task-queue-state.json"
+  - "__pycache__/"
+  - "fix_links.py"
+  - "push-wiki.sh"
+  - "skills-tutorials/"
+  - "wiki/"
+  - "OUTLINE.md"
